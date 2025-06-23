@@ -1,0 +1,33 @@
+@baseUrl = https://dev.test/api/tests
+@cType = application/json
+###
+GET {{baseUrl}}
+Content-Type: {{cType}}
+###
+GET {{baseUrl}}/2
+Content-Type: {{cType}}
+
+###
+POST {{baseUrl}}
+Content-Type: {{cType}}
+Accept: {{cType}}
+
+{
+  "name": "Test Name",
+  "description": "Test Description"
+}
+
+###
+PUT {{baseUrl}}/2
+Content-Type: {{cType}}
+Accept: {{cType}}
+
+{
+  "name": "Updated Test Name",
+  "description": "Updated Test Description"
+}
+
+###
+DELETE {{baseUrl}}/2
+Content-Type: {{cType}}
+Accept: {{cType}}
